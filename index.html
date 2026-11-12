@@ -1,0 +1,644 @@
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cimetBlue: '#0047FF',
+                    cimetDark: '#0B0F19',
+                    cimetGray: '#1F2937'
+                }
+            }
+        }
+    }
+</script>
+<!-- FontAwesome for Icons con Verificación de Integridad (SRI) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    .cimet-wrapper { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .folder-card:hover .folder-icon { transform: translateY(-5px); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #0047FF; border-radius: 4px; }
+</style>
+
+<div class="cimet-wrapper bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo CIMET -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <img src="b6f6f88f-6624-4a6d-8748-79738fba6541_2.jpg" alt="Logo CIMET" class="h-8 sm:h-9 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x50/0047FF/ffffff?text=CIMET';">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#inicio" class="text-gray-900 hover:text-cimetBlue transition-colors py-2 border-b-2 border-transparent hover:border-cimetBlue">Inicio</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-cimetBlue transition-colors py-2 border-b-2 border-transparent hover:border-cimetBlue">Nosotros</a>
+                <a href="#catalogo" class="text-gray-600 hover:text-cimetBlue transition-colors py-2 border-b-2 border-transparent hover:border-cimetBlue">Catálogo</a>
+                <a href="#contacto" class="text-gray-600 hover:text-cimetBlue transition-colors py-2 border-b-2 border-transparent hover:border-cimetBlue">Contáctanos</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/50621014896?text=Hola%20CIMET,%20me%20gustaría%20hablar%20con%20un%20ingeniero" target="_blank" rel="noopener noreferrer" class="bg-cimetBlue hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-200 transform hover:-translate-y-0.5 inline-flex items-center gap-2">
+                    <i class="fa-solid fa-hard-hat"></i> Hablar con un Ingeniero
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-700 hover:text-cimetBlue focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-4 space-y-3 shadow-xl">
+            <a href="#inicio" class="block text-gray-900 font-medium py-2 hover:text-cimetBlue mobile-link">Inicio</a>
+            <a href="#nosotros" class="block text-gray-600 font-medium py-2 hover:text-cimetBlue mobile-link">Nosotros</a>
+            <a href="#catalogo" class="block text-gray-600 font-medium py-2 hover:text-cimetBlue mobile-link">Catálogo</a>
+            <a href="#contacto" class="block text-gray-600 font-medium py-2 hover:text-cimetBlue mobile-link">Contáctanos</a>
+            <div class="pt-2">
+                <a href="https://wa.me/50621014896?text=Hola%20CIMET,%20me%20gustaría%20hablar%20con%20un%20ingeniero" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-cimetBlue text-white font-medium py-3 rounded-xl shadow-md">
+                    Hablar con un Ingeniero
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Inicio) -->
+    <section id="inicio" class="relative pt-28 pb-20 md:pt-36 md:h-[90vh] min-h-[600px] flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-cimetDark text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-25 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb18f06f7?auto=format&fit=crop&q=80&w=1920');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-cimetDark via-transparent to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-cimetBlue/20 border border-cimetBlue/40 text-blue-300 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-helmet-safety"></i> Ingeniería y Construcción Profesional
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Construimos tus sueños con <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">precisión y calidad</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed font-light">
+                    En <strong class="text-white font-semibold">CIMET</strong> nos especializamos en hacer realidad proyectos arquitectónicos sólidos, funcionales y con acabados de excelencia.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#catalogo" class="inline-flex justify-center items-center gap-2 bg-cimetBlue hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl shadow-xl shadow-blue-600/30 transition-all transform hover:-translate-y-1">
+                        <i class="fa-solid fa-folder-open"></i> Ver Catálogo de Casas
+                    </a>
+                    <a href="https://wa.me/50621014896?text=Hola%20CIMET,%20me%20gustaría%20hablar%20con%20un%20ingeniero" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-sm border border-white/20 transition-all">
+                        <i class="fa-brands fa-whatsapp text-xl text-green-400"></i> Hablar con un Ingeniero
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-cimetBlue font-semibold uppercase tracking-wider text-sm">¿Quiénes Somos?</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Nuestros Pilares y Especialidades</h2>
+                <div class="w-20 h-1 bg-cimetBlue mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg">
+                    Nos concentramos en <strong class="text-gray-900 font-semibold">diseño - construcción - consultoría - trámite de bonos - arquitectura</strong>, ofreciendo un servicio integral de principio a fin.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Diseño -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center text-2xl mb-4 mx-auto group-hover:bg-cimetBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Diseño</h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Concepción de espacios únicos, modernos y adaptados a las necesidades de cada cliente.
+                    </p>
+                </div>
+
+                <!-- Construcción -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center text-2xl mb-4 mx-auto group-hover:bg-cimetBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Construcción</h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Ejecución de obra civil con máxima rigurosidad técnica y altos estándares de seguridad.
+                    </p>
+                </div>
+
+                <!-- Consultoría -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center text-2xl mb-4 mx-auto group-hover:bg-cimetBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Consultoría</h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Asesoría experta en presupuestos, viabilidad y supervisión de proyectos.
+                    </p>
+                </div>
+
+                <!-- Trámite de Bonos -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center text-2xl mb-4 mx-auto group-hover:bg-cimetBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Trámite de Bonos</h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Gestión eficiente y transparente para la aplicación de bonos de vivienda.
+                    </p>
+                </div>
+
+                <!-- Arquitectura -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group text-center sm:col-span-2 lg:col-span-1">
+                    <div class="w-14 h-14 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center text-2xl mb-4 mx-auto group-hover:bg-cimetBlue group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Arquitectura</h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Planos constructivos, anteproyectos y permisos al día con normativas vigentes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Banner CTA Ingeniero -->
+            <div class="mt-16 bg-gradient-to-r from-gray-900 to-cimetDark rounded-3xl p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div>
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-3">¿Tienes en mente un proyecto constructivo?</h3>
+                    <p class="text-gray-300 text-sm sm:text-base max-w-xl">
+                        Conecta de inmediato con nuestro equipo de ingeniería y recibe asesoría profesional personalizada vía WhatsApp.
+                    </p>
+                </div>
+                <a href="https://wa.me/50621014896?text=Hola%20CIMET,%20me%20gustaría%20hablar%20con%20un%20ingeniero%20sobre%20mi%20proyecto" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap bg-cimetBlue hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all inline-flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl text-green-400"></i> Hablar con un Ingeniero
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Casas Section -->
+    <section id="catalogo" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-cimetBlue font-semibold uppercase tracking-wider text-sm">Portafolio</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Catálogo de Casas</h2>
+                <div class="w-20 h-1 bg-cimetBlue mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg">
+                    Explora las carpetas de nuestros proyectos habitacionales. Haz clic en cualquiera para ver su galería y estado actual.
+                </p>
+            </div>
+
+            <!-- Folders Grid -->
+            <div id="folders-view" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Casa Quebrada Honda -->
+                <div onclick="openFolder('quebrada_honda')" class="folder-card relative bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border border-gray-200 cursor-pointer transition-all duration-300 group">
+                    <span class="absolute top-4 right-4 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full border border-green-200 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span> Finalizada
+                    </span>
+                    <div class="w-16 h-16 bg-blue-50 text-cimetBlue rounded-2xl flex items-center justify-center text-3xl transition-transform duration-300 folder-icon mb-4">
+                        <i class="fa-solid fa-folder-closed group-hover:hidden"></i>
+                        <i class="fa-solid fa-folder-open hidden group-hover:block"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-cimetBlue transition-colors mb-1">Casa Quebrada Honda</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">Proyecto habitacional completado.</p>
+                    <div class="mt-6 flex items-center text-sm font-semibold text-cimetBlue gap-1 group-hover:translate-x-1 transition-transform">
+                        Ver fotos <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Casa La Bonita -->
+                <div onclick="openFolder('la_bonita')" class="folder-card relative bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border border-gray-200 cursor-pointer transition-all duration-300 group">
+                    <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full border border-amber-200 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span> En construcción
+                    </span>
+                    <div class="w-16 h-16 bg-blue-50 text-cimetBlue rounded-2xl flex items-center justify-center text-3xl transition-transform duration-300 folder-icon mb-4">
+                        <i class="fa-solid fa-folder-closed group-hover:hidden"></i>
+                        <i class="fa-solid fa-folder-open hidden group-hover:block"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-cimetBlue transition-colors mb-1">Casa La Bonita</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">En proceso de ejecución de obra.</p>
+                    <div class="mt-6 flex items-center text-sm font-semibold text-cimetBlue gap-1 group-hover:translate-x-1 transition-transform">
+                        Ver fotos <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Casa Uvita -->
+                <div onclick="openFolder('uvita')" class="folder-card relative bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border border-gray-200 cursor-pointer transition-all duration-300 group">
+                    <span class="absolute top-4 right-4 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full border border-green-200 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span> Finalizada
+                    </span>
+                    <div class="w-16 h-16 bg-blue-50 text-cimetBlue rounded-2xl flex items-center justify-center text-3xl transition-transform duration-300 folder-icon mb-4">
+                        <i class="fa-solid fa-folder-closed group-hover:hidden"></i>
+                        <i class="fa-solid fa-folder-open hidden group-hover:block"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-cimetBlue transition-colors mb-1">Casa Uvita</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">Proyecto habitacional completado.</p>
+                    <div class="mt-6 flex items-center text-sm font-semibold text-cimetBlue gap-1 group-hover:translate-x-1 transition-transform">
+                        Ver fotos <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Casa Tirra -->
+                <div onclick="openFolder('tirra')" class="folder-card relative bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border border-gray-200 cursor-pointer transition-all duration-300 group">
+                    <span class="absolute top-4 right-4 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full border border-green-200 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span> Finalizada
+                    </span>
+                    <div class="w-16 h-16 bg-blue-50 text-cimetBlue rounded-2xl flex items-center justify-center text-3xl transition-transform duration-300 folder-icon mb-4">
+                        <i class="fa-solid fa-folder-closed group-hover:hidden"></i>
+                        <i class="fa-solid fa-folder-open hidden group-hover:block"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-cimetBlue transition-colors mb-1">Casa Tirrá</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">Proyecto habitacional completado.</p>
+                    <div class="mt-6 flex items-center text-sm font-semibold text-cimetBlue gap-1 group-hover:translate-x-1 transition-transform">
+                        Ver fotos <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Casa Golfito -->
+                <div onclick="openFolder('golfito')" class="folder-card relative bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border border-gray-200 cursor-pointer transition-all duration-300 group">
+                    <span class="absolute top-4 right-4 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full border border-green-200 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span> Finalizada
+                    </span>
+                    <div class="w-16 h-16 bg-blue-50 text-cimetBlue rounded-2xl flex items-center justify-center text-3xl transition-transform duration-300 folder-icon mb-4">
+                        <i class="fa-solid fa-folder-closed group-hover:hidden"></i>
+                        <i class="fa-solid fa-folder-open hidden group-hover:block"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-cimetBlue transition-colors mb-1">Casa Golfito</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">Proyecto habitacional completado.</p>
+                    <div class="mt-6 flex items-center text-sm font-semibold text-cimetBlue gap-1 group-hover:translate-x-1 transition-transform">
+                        Ver fotos <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Folder Content Container (Hidden by default) -->
+            <div id="folder-content-container" class="hidden mt-12 bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-200">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 mb-8 border-b border-gray-100 gap-4">
+                    <div>
+                        <button onclick="closeFolder()" class="inline-flex items-center gap-2 text-sm font-semibold text-cimetBlue bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-xl transition-colors mb-3">
+                            <i class="fa-solid fa-arrow-left"></i> Volver a Carpetas
+                        </button>
+                        <h3 id="folder-title" class="text-2xl sm:text-3xl font-extrabold text-gray-900">Nombre de la Casa</h3>
+                    </div>
+                    <div id="folder-status-badge"></div>
+                </div>
+
+                <!-- Photos Grid inside folder -->
+                <div id="photos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Injected dynamically -->
+                </div>
+
+                <div class="mt-10 text-center border-t border-gray-100 pt-8">
+                    <a id="consult-house-btn" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-cimetBlue hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Consultar sobre este proyecto en WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Lightbox -->
+    <div id="image-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
+        <button onclick="closeImageModal()" class="absolute top-6 right-6 text-white text-3xl hover:text-gray-300">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="modal-img" src="" alt="Vista Previa" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain">
+    </div>
+
+    <!-- Contactanos Section -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-cimetBlue font-semibold uppercase tracking-wider text-sm">Hablemos</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Contáctanos</h2>
+                <div class="w-20 h-1 bg-cimetBlue mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg">
+                    ¿Tienes un terreno o un proyecto en mente? Comunícate de forma directa con nuestros ingenieros.
+                </p>
+            </div>
+
+            <!-- Contact Info Cards Grid -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-8 sm:p-12 rounded-3xl border border-gray-100 shadow-sm space-y-8">
+                    <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">Información de Contacto Directo</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <a href="https://maps.app.goo.gl/HDWaEUcj8GoLCsox5?g_st=ic" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-cimetBlue hover:shadow-md transition-all group">
+                            <div class="w-12 h-12 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center shrink-0 text-xl group-hover:bg-cimetBlue group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 group-hover:text-cimetBlue transition-colors flex items-center gap-1.5">
+                                    Oficina Principal <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400"></i>
+                                </h4>
+                                <p class="text-gray-600 text-sm mt-1">Ver ubicación en el Mapa</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                            <div class="w-12 h-12 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Teléfono / WhatsApp</h4>
+                                <p class="text-gray-600 text-sm mt-1">+506 2101-4896</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                            <div class="w-12 h-12 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Correo Electrónico</h4>
+                                <a href="mailto:cimetcr@gmail.com" class="text-gray-600 hover:text-cimetBlue transition-colors text-sm mt-1 block">cimetcr@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                            <div class="w-12 h-12 bg-blue-100 text-cimetBlue rounded-xl flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Horario de Atención</h4>
+                                <p class="text-gray-600 text-sm mt-1">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="pt-6 border-t border-gray-200 flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://wa.me/50621014896?text=Hola%20CIMET,%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i> Enviar Mensaje por WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/cimet_construccion?obrf=cGxuMmEwOWtpZGs5" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-3 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 hover:opacity-95 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-instagram text-2xl"></i> Ir a nuestro Instagram
+                        </a>
+                        <a href="https://maps.app.goo.gl/HDWaEUcj8GoLCsox5?g_st=ic" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-3 bg-gray-900 hover:bg-black text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-map-location-dot text-xl text-blue-400"></i> Abrir Ubicación
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cimetDark text-white pt-16 pb-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+                <div class="space-y-4">
+                    <div class="bg-white p-2.5 rounded-lg inline-block">
+                        <img src="b6f6f88f-6624-4a6d-8748-79738fba6541_2.jpg" alt="Logo CIMET" class="h-8 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/180x50/0047FF/ffffff?text=CIMET';">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Constructora e Ingeniería especializada en diseño, construcción, consultoría y arquitectura.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-base">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#inicio" class="hover:text-cimetBlue transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-cimetBlue transition-colors">Nosotros</a></li>
+                        <li><a href="#catalogo" class="hover:text-cimetBlue transition-colors">Catálogo de Casas</a></li>
+                        <li><a href="#contacto" class="hover:text-cimetBlue transition-colors">Contáctanos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-base">Especialidades</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Diseño y Arquitectura</li>
+                        <li>Construcción de Obra Civil</li>
+                        <li>Consultoría Técnica</li>
+                        <li>Trámite de Bonos de Vivienda</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-base">Contacto Directo</h4>
+                    <p class="text-sm text-gray-400 mb-2">Teléfono / WhatsApp:</p>
+                    <a href="https://wa.me/50621014896" target="_blank" rel="noopener noreferrer" class="text-white font-bold text-lg hover:text-cimetBlue transition-colors block mb-3">+506 2101-4896</a>
+                    <p class="text-sm text-gray-400 mb-1">Correo Electrónico:</p>
+                    <a href="mailto:cimetcr@gmail.com" class="text-gray-300 font-medium text-sm hover:text-cimetBlue transition-colors block">cimetcr@gmail.com</a>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://wa.me/50621014896" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-cimetBlue text-white rounded-xl flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cimet_construccion?obrf=cGxuMmEwOWtpZGs5" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-cimetBlue text-white rounded-xl flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 CIMET Constructora. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Diseño y Construcción de Excelencia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp & Instagram Buttons (Bottom Right) -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/50621014896?text=Hola%20CIMET,%20me%20gustaría%20más%20información" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110 group relative" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span class="absolute right-full mr-3 bg-gray-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-md pointer-events-none">
+                Escríbenos por WhatsApp
+            </span>
+        </a>
+        <!-- Instagram Floating Button -->
+        <a href="https://www.instagram.com/cimet_construccion?obrf=cGxuMmEwOWtpZGs5" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 hover:opacity-95 text-white rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110 group relative" aria-label="Instagram">
+            <i class="fa-brands fa-instagram text-2xl"></i>
+            <span class="absolute right-full mr-3 bg-gray-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-md pointer-events-none">
+                Síguenos en Instagram
+            </span>
+        </a>
+    </div>
+
+</div>
+
+<!-- JavaScript for Catalog Folders and Mobile Menu -->
+<script>
+    'use strict';
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // House data for folders (Inmutable para evitar alteraciones en tiempo de ejecución)
+    const housesData = Object.freeze({
+        'quebrada_honda': {
+            name: 'Casa Quebrada Honda',
+            status: 'Finalizada',
+            statusClass: 'bg-green-100 text-green-800 border-green-200',
+            dotClass: 'bg-green-500',
+            photos: [
+                'Unknown-1.jpg',
+                'Unknown-2.jpg',
+                'Unknown-3.jpg',
+                'Unknown.jpg'
+            ]
+        },
+        'la_bonita': {
+            name: 'Casa La Bonita',
+            status: 'En construcción',
+            statusClass: 'bg-amber-100 text-amber-800 border-amber-200',
+            dotClass: 'bg-amber-500 animate-pulse',
+            photos: [
+                'Unknown-1_2.jpg',
+                'Unknown-2_2.jpg',
+                'Unknown_2.jpg'
+            ]
+        },
+        'uvita': {
+            name: 'Casa Uvita',
+            status: 'Finalizada',
+            statusClass: 'bg-green-100 text-green-800 border-green-200',
+            dotClass: 'bg-green-500',
+            photos: [
+                'Unknown-1_3.jpg',
+                'Unknown-2_3.jpg',
+                'Unknown_3.jpg'
+            ]
+        },
+        'tirra': {
+            name: 'Casa Tirrá',
+            status: 'Finalizada',
+            statusClass: 'bg-green-100 text-green-800 border-green-200',
+            dotClass: 'bg-green-500',
+            photos: [
+                'Unknown-1.jpeg',
+                'Unknown-2.jpeg',
+                'Unknown-3.jpeg',
+                'Unknown.jpeg'
+            ]
+        },
+        'golfito': {
+            name: 'Casa Golfito',
+            status: 'Finalizada',
+            statusClass: 'bg-green-100 text-green-800 border-green-200',
+            dotClass: 'bg-green-500',
+            photos: [
+                'Unknown-1_4.jpg',
+                'Unknown-2_4.jpg',
+                'Unknown-3_2.jpg',
+                'Unknown_4.jpg'
+            ]
+        }
+    });
+
+    function openFolder(houseKey) {
+        if (!Object.prototype.hasOwnProperty.call(housesData, houseKey)) return;
+        const house = housesData[houseKey];
+
+        // Hide folders grid, show content
+        document.getElementById('folders-view').classList.add('hidden');
+        const container = document.getElementById('folder-content-container');
+        container.classList.remove('hidden');
+
+        // Set Title & Status usando creación segura de nodos (Previene XSS)
+        document.getElementById('folder-title').textContent = house.name;
+        
+        const badgeContainer = document.getElementById('folder-status-badge');
+        badgeContainer.replaceChildren();
+        const badgeSpan = document.createElement('span');
+        badgeSpan.className = `px-3.5 py-1.5 rounded-full text-xs font-bold border flex items-center gap-2 ${house.statusClass}`;
+        
+        const dotSpan = document.createElement('span');
+        dotSpan.className = `w-2 h-2 rounded-full ${house.dotClass}`;
+        
+        badgeSpan.appendChild(dotSpan);
+        badgeSpan.appendChild(document.createTextNode(' ' + house.status));
+        badgeContainer.appendChild(badgeSpan);
+
+        // Set WhatsApp consult link de forma segura
+        const whatsappMsg = encodeURIComponent(`Hola CIMET, me interesa consultar sobre el proyecto ${house.name} (${house.status})`);
+        const consultBtn = document.getElementById('consult-house-btn');
+        consultBtn.href = `https://wa.me/50621014896?text=${whatsappMsg}`;
+        consultBtn.rel = 'noopener noreferrer';
+
+        // Populate photos usando elementos DOM seguros en lugar de innerHTML
+        const grid = document.getElementById('photos-grid');
+        grid.replaceChildren();
+        
+        house.photos.forEach(photoUrl => {
+            const item = document.createElement('div');
+            item.className = 'relative group overflow-hidden rounded-2xl shadow-md bg-gray-200 aspect-video cursor-pointer select-none';
+            
+            const img = document.createElement('img');
+            img.src = photoUrl;
+            img.alt = house.name;
+            img.className = 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500';
+            img.loading = 'lazy';
+            img.draggable = false;
+            img.onerror = function() {
+                this.onerror = null;
+                this.src = 'https://placehold.co/600x400/0047FF/ffffff?text=CIMET+Constructora';
+            };
+
+            const overlay = document.createElement('div');
+            overlay.className = 'absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium gap-2';
+            
+            const icon = document.createElement('i');
+            icon.className = 'fa-solid fa-magnifying-glass-plus text-xl';
+            
+            overlay.appendChild(icon);
+            overlay.appendChild(document.createTextNode(' Ver imagen'));
+            
+            item.appendChild(img);
+            item.appendChild(overlay);
+            item.addEventListener('click', () => openImageModal(photoUrl));
+            grid.appendChild(item);
+        });
+
+        // Scroll to container smoothly
+        container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function closeFolder() {
+        document.getElementById('folder-content-container').classList.add('hidden');
+        document.getElementById('folders-view').classList.remove('hidden');
+        document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Lightbox modal functions
+    function openImageModal(src) {
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        modalImg.src = src;
+        modal.classList.remove('hidden');
+    }
+
+    function closeImageModal() {
+        document.getElementById('image-modal').classList.add('hidden');
+    }
+
+    // Close modal on background click
+    document.getElementById('image-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'image-modal') {
+            closeImageModal();
+        }
+    });
+</script>
