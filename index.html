@@ -282,17 +282,17 @@
 
             <!-- Folder Content Container (Hidden by default) -->
             <div id="folder-content-container" class="hidden mt-12 bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-200">
-                <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr_auto] items-center pb-6 mb-8 border-b border-gray-100 gap-4 sm:gap-6">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 mb-8 border-b border-gray-100 gap-4">
                     <div>
                         <button onclick="closeFolder()" class="inline-flex items-center gap-2 text-sm font-semibold text-cimetBlue bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-xl transition-colors mb-3">
                             <i class="fa-solid fa-arrow-left"></i> Volver a Carpetas
                         </button>
-                        <h3 id="folder-title" class="text-2xl sm:text-3xl font-extrabold text-gray-900">Nombre de la Casa</h3>
+                        <div class="flex items-center gap-3">
+                            <h3 id="folder-title" class="text-2xl sm:text-3xl font-extrabold text-gray-900">Nombre de la Casa</h3>
+                            <img src="logo-cimet.jpg" alt="Logo CIMET" class="h-6 sm:h-7 w-auto object-contain">
+                        </div>
                     </div>
-                    <div class="flex justify-center">
-                        <img src="logo-cimet.jpg" alt="Logo CIMET" class="h-10 sm:h-14 w-auto object-contain">
-                    </div>
-                    <div id="folder-status-badge" class="justify-self-start sm:justify-self-end"></div>
+                    <div id="folder-status-badge"></div>
                 </div>
 
                 <!-- Photos Grid inside folder -->
